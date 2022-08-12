@@ -1,0 +1,36 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter 1st Number");
+        double a = scan.nextDouble();
+        System.out.print("Enter 2nd Number");
+        double b = scan.nextDouble();
+        System.out.print("Lutfen secim yapiniz, 1 bölme için, 2 çarpim icin, 3 toplama icin, 4 cıkarma icin");
+        int d = scan.nextInt();
+        System.out.print(Counter(d,a,b));
+
+
+    }
+    public static double Counter(int Action, double FirstNumber, double SecondNumber){
+        double NewNumber = 0;
+
+        switch (Action){
+            case 1:
+                 NewNumber = FirstNumber%SecondNumber;
+            case 2:
+                 NewNumber = FirstNumber*SecondNumber;
+            case 3:
+                NewNumber = FirstNumber + SecondNumber;
+            case 4:
+                NewNumber = FirstNumber-SecondNumber;
+
+        }
+        return NewNumber;
+
+    }
+}
